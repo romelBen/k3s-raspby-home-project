@@ -33,5 +33,20 @@ Finally, begin provisioning your cluster onto your Raspberry Pis using the follo
 To get access to your Kubernetes cluster, use this command:
 `scp debian@master_ip:~/.kube/config ~/.kube/config`
 
+# What will be added onto this project:
+I will be installing several Docker containers onto this Kubernetes cluster:
+- Prometheus
+- Grafana
+- Promtail
+- Loki
+- Bitwarden
+- GVM (Greenbone Vulnerability Manager)
+- Wazuh
+- SonarQube (maybe)
+- ZAP Proxy (maybe)
+- sqlmap (maybe)
+
+This will be a big feat which will take time. Whatever container that has been built will be updated here in this section. Please feel free to refer to my acknowledgement of the Rancher's ansible build and my code.
+
 # Acknowledgements
 This project could not be achieved without the help of Rancher's k3s-ansible repo. Please refer to repo [k3s-ansible](https://github.com/k3s-io/k3s-ansible) which uses Ansible to install k3s on Raspberry's ARM chips. This repo is extremely helpful. Note: I would recommend using k3s on Raspberry Pi's since k8s is power hungry when it comes to resources. Best to stick with k3s.
