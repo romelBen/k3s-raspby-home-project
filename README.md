@@ -30,5 +30,9 @@ In `inventory/k3s-cluster/groups_vars/all.yml`, match your environment to what h
 Finally, being provisioning your cluster using the following command:
 `ansible-playbook site.yml -i inventory/k3s-cluster/hosts.ini`
 
+# Kubeconfig
+To get access to your Kubernetes cluster, use this command:
+`scp debian@master_ip:~/.kube/config ~/.kube/config`
+
 # Acknowledgements
 This project could not be achieved without the help of Rancher's k3s-ansible repo. Please refer to repo [k3s-ansible](https://github.com/k3s-io/k3s-ansible) which uses Ansible to install k3s on Raspberry's ARM chips. This repo is extremely helpful. Note: I would recommend using k3s on Raspberry Pi's since k8s is power hungry when it comes to resources. Best to stick with k3s.
