@@ -10,8 +10,7 @@ The project will be installing Kubernetes cluster on Raspberry Pi 4's 64 bit:
   - use `nmap -sn <ip_address_here>` (ex. `nmap -sn 10.0.100.1/24`)
 
 # Usage
-To begin this project, I have created a folder which will contain the necessary requirements to run our build:
-Refer to directory `inventory/k3s-cluster/hosts.ini` to match your Raspberry Pi's IP addresses to your liking. Here is an example that is provided:
+I have created a folder which will contain the necessary requirements to run our build. Refer to directory `inventory/k3s-cluster/hosts.ini` to match your Raspberry Pi's IP addresses to your liking (which was attained by using `nmap`.)Here is an example of `hosts.ini` that is provided:
 
 ```
 [master]
@@ -27,7 +26,7 @@ node
 
 In `inventory/k3s-cluster/groups_vars/all.yml`, match your environment to what has been installed.
 
-Finally, being provisioning your cluster using the following command:
+Finally, begin provisioning your cluster onto your Raspberry Pis using the following command:
 `ansible-playbook site.yml -i inventory/k3s-cluster/hosts.ini`
 
 # Kubeconfig
